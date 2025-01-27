@@ -1,0 +1,42 @@
+@import "../style/variables.style.scss";
+
+.nested-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .nested-comments-content {
+    display: flex;
+    align-items: start;
+    gap: 0.9rem;
+    padding: 0rem 1rem;
+
+    .nested-comments-right {
+      width: 100%;
+      font-size: 0.9rem;
+      background-color: #11057e06;
+      margin: 0.3rem 0rem;
+
+      border-radius: 10px;
+      .nested-comments-header {
+        display: flex;
+        justify-content: space-between;
+        color: $primary_color;
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
+      }
+      .nested-comments-text {
+        padding: 0rem 0.5rem 0.5rem 0.5rem;
+      }
+      .nested-comments-reply-icon {
+        color: $gray_color;
+      }
+    }
+  }
+
+  .nested-comments-replies {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0rem 0rem 0rem 1rem;
+  }
+}

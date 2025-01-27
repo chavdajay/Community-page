@@ -1,0 +1,120 @@
+@import "./variables.style.scss";
+
+.sidebar-main {
+  height: 96vh;
+  width: 15% !important;
+  border-right: 1px solid $gray_color;
+  box-shadow: 0 4px 6px rgba(252, 95, 54, 0.1);
+  padding: 1rem 1rem;
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none; /* Hide sidebar on mobile */
+  }
+
+  .sidebar-title {
+    @extend .sidebar-title;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: $gray_color;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &.active {
+      color: $primary_color;
+      background-color: #11057e06;
+    }
+  }
+}
+
+/* Mobile Navbar Styles */
+.navbar-mobile {
+  display: none; // Hide navbar on larger screens
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  .navbar-title {
+    @extend .sidebar-title;
+  }
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $primary_color;
+  }
+
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 99;
+
+    &.open {
+      display: flex; /* Show links when menu is open */
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 10px 20px;
+      text-align: center;
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &.active {
+        color: $primary_color;
+        background-color: #11057e06;
+      }
+    }
+  }
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+}

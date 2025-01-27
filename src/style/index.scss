@@ -1,0 +1,30 @@
+@import "./variables.style.scss";
+//global style for the application
+body {
+  margin: 0;
+  font-family: "Poppins", serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+hr {
+  border: 1px solid $border_color;
+}
+a {
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  height: 100vh;
+
+  .dashboard {
+    width: 85%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #11057e0d;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

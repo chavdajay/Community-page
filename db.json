@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": "43e1",
+      "title": "Test basic details",
+      "content": "Story Book",
+      "username": "test123",
+      "imgurl": "https://monkeypen.com/blogs/news/do-you-wonder-about-rain-snow-sleet-and-hail-free-childrens-book",
+      "comments": [
+        {
+          "id": "1737981928746",
+          "content": "Hi..",
+          "replies": [
+            {
+              "id": "1737981956881",
+              "content": "hello",
+              "replies": [
+                {
+                  "id": "1737982006223",
+                  "content": "hi",
+                  "replies": []
+                }
+              ]
+            },
+            {
+              "id": "1737981987106",
+              "content": "how are you",
+              "replies": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
